@@ -1,4 +1,4 @@
-// Main function
+ï»¿// Main function
 //meow
 /*/\_/\
  ( o.o )
@@ -13,8 +13,8 @@ int main()
     system("chcp 1251");
     double p = 0.0;
     double q = 0.0;
-    std::cout << "Ââåäèòå âåðîÿòíîñòü äîáàâëåíèÿ çàäà÷è P (0, 100): "; std::cin >> p;
-    std::cout << std::endl << "Ââåäèòå âåðîÿòíîñòü èçâëå÷åíèÿ çàäà÷è Q (0, 100): "; std::cin >> q;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ€Ð¾ÑÑ‚Ð½Ð¾ÑÑ‚ÑŒ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð·Ð°Ð´Ð°Ñ‡Ð¸ P (0, 100): "; std::cin >> p;
+    std::cout << std::endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÐµÑ€Ð¾ÑÑ‚Ð½Ð¾ÑÑ‚ÑŒ Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ñ Ð·Ð°Ð´Ð°Ñ‡Ð¸ Q (0, 100): "; std::cin >> q;
 
     int countPushSuccess = 0;
     int countPopSuccess = 0;
@@ -27,12 +27,12 @@ int main()
             try {
                 q1.enqueue(i);
                 countPushSuccess++;
-                std::cout << randNumPush << " < " << p << ", äîáàâèòü " << i << std::endl;
+                std::cout << randNumPush << " < " << p << ", Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ " << i << std::endl;
             }
 
             catch (...) {
                 countPushExcept++;
-                std::cout << "Î÷åðåäü ïîëíà, íå ìîãó äîáàâèòü" << std::endl;
+                std::cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿Ð¾Ð»Ð½Ð°, Ð½Ðµ Ð¼Ð¾Ð³Ñƒ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ" << std::endl;
             }
         }
 
@@ -42,11 +42,11 @@ int main()
             try {
             tmp = q1.peektail();
             countPopSuccess++;
-            std::cout << randNumPop << " < " << q << " èçúÿòü " << tmp << std::endl;
+            std::cout << randNumPop << " < " << q << " Ð¸Ð·ÑŠÑÑ‚ÑŒ " << tmp << std::endl;
         }
         catch (...) {
             countPopExcept++;
-            std::cout << "Î÷åðåäü ïóñòà, íå ìîãó èçúÿòü" << std::endl;
+            std::cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿ÑƒÑÑ‚Ð°, Ð½Ðµ Ð¼Ð¾Ð³Ñƒ Ð¸Ð·ÑŠÑÑ‚ÑŒ" << std::endl;
         }
     }
 

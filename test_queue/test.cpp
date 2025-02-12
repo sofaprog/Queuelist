@@ -1,4 +1,4 @@
-//meow
+п»ї//meow
 /*/\_/\
  ( o.o )
   > ^ <*/
@@ -7,18 +7,18 @@
 TEST(Queue, Correct_IsEmpty_Initially) {
     Queue<int> q1;
     bool f = q1.isEmpty();
-    EXPECT_EQ(true, f); // Очередь должна быть пустой сразу после создания
+    EXPECT_EQ(true, f); // РћС‡РµСЂРµРґСЊ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№ СЃСЂР°Р·Сѓ РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ
 }
 TEST(Queue, Correct_IsEmpty_AfterPush) {
     Queue<int> q1;
     q1.enqueue(1);
     bool f = q1.isEmpty();
-    EXPECT_EQ(0, f); // Очередь не должна быть пустой после добавления элемента
+    EXPECT_EQ(0, f); // РћС‡РµСЂРµРґСЊ РЅРµ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№ РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р°
 }
 TEST(Queue, Correct_Push) {
     Queue<int> q1;
     q1.enqueue(42);
-    EXPECT_EQ(42, q1.peektail()); // Проверяем, что элемент добавлен в конец
+    EXPECT_EQ(42, q1.peektail()); // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ СЌР»РµРјРµРЅС‚ РґРѕР±Р°РІР»РµРЅ РІ РєРѕРЅРµС†
 }
 TEST(Queue, Correct_Pop) {
     Queue<int> q1;
@@ -27,7 +27,7 @@ TEST(Queue, Correct_Pop) {
     q1.enqueue(30);
     q1.dequeue();
     q1.dequeue();
-    EXPECT_EQ(30, q1.peektail()); // Проверяем, что pop удаляет правильное значение
+    EXPECT_EQ(30, q1.peektail()); // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ pop СѓРґР°Р»СЏРµС‚ РїСЂР°РІРёР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 }
 TEST(Queue, Correct_PopPush) {
     Queue<int> q1;
@@ -46,14 +46,14 @@ TEST(Queue, Correct_PeekHead) {
     q1.enqueue(0);
     for (int i = 1; i < 5; i++) {
         q1.enqueue(i);
-        EXPECT_EQ(0, q1.peekhead()); // Голова очереди не меняется
+        EXPECT_EQ(0, q1.peekhead()); // Р“РѕР»РѕРІР° РѕС‡РµСЂРµРґРё РЅРµ РјРµРЅСЏРµС‚СЃСЏ
     }
 }
 TEST(Queue, Correct_PeekTail) {
     Queue<int> q1;
     for (int i = 0; i < 5; i++) {
         q1.enqueue(i);
-        EXPECT_EQ(i, q1.peektail()); // Хвост должен совпадать с последним добавленным элементом
+        EXPECT_EQ(i, q1.peektail()); // РҐРІРѕСЃС‚ РґРѕР»Р¶РµРЅ СЃРѕРІРїР°РґР°С‚СЊ СЃ РїРѕСЃР»РµРґРЅРёРј РґРѕР±Р°РІР»РµРЅРЅС‹Рј СЌР»РµРјРµРЅС‚РѕРј
     }
 }
 TEST (Queue, Correct_Equal_True) {
@@ -62,7 +62,7 @@ TEST (Queue, Correct_Equal_True) {
         q1.enqueue(i);
         q2.enqueue(i);
     }
-    EXPECT_EQ(q1==q2,true); // Две одинаковые очереди должны быть равны
+    EXPECT_EQ(q1==q2,true); // Р”РІРµ РѕРґРёРЅР°РєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЂР°РІРЅС‹
 }
 
 TEST(Queue, Correct_Equal_False) {
@@ -72,7 +72,7 @@ TEST(Queue, Correct_Equal_False) {
         q2.enqueue(i);
     }
     q1.dequeue();
-    EXPECT_NE(q1, q2); // Очереди с разными элементами должны быть не равны
+    EXPECT_NE(q1, q2); // РћС‡РµСЂРµРґРё СЃ СЂР°Р·РЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РЅРµ СЂР°РІРЅС‹
 }
 TEST(Queue, Correct_Assignment_Copy) {
     Queue<int> q1, q2;
@@ -80,7 +80,7 @@ TEST(Queue, Correct_Assignment_Copy) {
         q1.enqueue(i);
     }
     q2 = q1;
-    EXPECT_EQ(q1, q2); // Проверяем, что после присваивания очереди равны
+    EXPECT_EQ(q1, q2); // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РїРѕСЃР»Рµ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РѕС‡РµСЂРµРґРё СЂР°РІРЅС‹
 }
 
 TEST(Queue, Correct_Assignment_Independent) {
@@ -90,7 +90,7 @@ TEST(Queue, Correct_Assignment_Independent) {
     }
     q2 = q1;
     q1.dequeue();
-    EXPECT_NE(q1, q2); // Проверяем, что очереди независимы после присваивания
+    EXPECT_NE(q1, q2); // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РѕС‡РµСЂРµРґРё РЅРµР·Р°РІРёСЃРёРјС‹ РїРѕСЃР»Рµ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 }
 TEST(Queue, TestPeekOnEmptyQueue) {
     Queue<int> queue;
