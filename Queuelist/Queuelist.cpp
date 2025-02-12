@@ -10,7 +10,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     Queue<int> q1;
-
+    system("chcp 1251");
     double p = 0.0;
     double q = 0.0;
     std::cout << "Введите вероятность добавления задачи P (0, 100): "; std::cin >> p;
@@ -29,6 +29,7 @@ int main()
                 countPushSuccess++;
                 std::cout << randNumPush << " < " << p << ", добавить " << i << std::endl;
             }
+
             catch (...) {
                 countPushExcept++;
                 std::cout << "Очередь полна, не могу добавить" << std::endl;
